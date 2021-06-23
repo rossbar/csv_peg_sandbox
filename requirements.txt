@@ -2,3 +2,4 @@ Arpeggio
 numpy
 matplotlib
 ipython
+memory_profiler
