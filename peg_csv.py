@@ -30,22 +30,21 @@ def csvfile():
 parser = ParserPython(csvfile, ws='\t ')
 
 
-@profile
-def parse_with_peg(fname):
-    with open(fname, 'r') as fh:
-        test_data = fh.read()
-    parse_tree = parser.parse(test_data)
-    return parse_tree
-
-
-@profile
-def parse_with_loadtxt(fname):
-    a = np.loadtxt(fname, delimiter=",")
-    return a
-
-
 if __name__ == "__main__":
     import numpy as np
+
+    @profile
+    def parse_with_peg(fname):
+        with open(fname, 'r') as fh:
+            test_data = fh.read()
+        parse_tree = parser.parse(test_data)
+        return parse_tree
+    
+    
+    @profile
+    def parse_with_loadtxt(fname):
+        a = np.loadtxt(fname, delimiter=",")
+        return a
 
     # Generate test data
     rng = np.random.default_rng()

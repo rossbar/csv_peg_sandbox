@@ -13,5 +13,5 @@ Compare this with the ~1.3 MB used by `np.loadtxt` during line-by-line parsing.
 To reproduce:
 
 ```
-python -m memory_profiler csv.py
+python -m memory_profiler peg_csv.py
 ```
