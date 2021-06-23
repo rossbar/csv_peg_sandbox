@@ -1,0 +1,4 @@
+Arpeggio
+numpy
+matplotlib
+ipython
